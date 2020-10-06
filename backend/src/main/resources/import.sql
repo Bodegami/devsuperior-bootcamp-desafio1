@@ -1,0 +1,1 @@
+INSERT INTO tb_clients (name, cpf, income, children) VALUES ('Maria', '02880946-03', 2.000, 2 )

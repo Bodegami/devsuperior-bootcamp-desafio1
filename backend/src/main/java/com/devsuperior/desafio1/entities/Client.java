@@ -36,7 +36,7 @@ public class Client implements Serializable{
 		this.id = id;
 		this.name = name;
 		this.cpf = cpf;
-		this.income = income;
+		this.income =  income;
 		this.birthDate = birthDate;
 		this.children = children;
 	}
