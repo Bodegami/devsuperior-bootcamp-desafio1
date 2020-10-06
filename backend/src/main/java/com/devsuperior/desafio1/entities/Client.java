@@ -21,7 +21,7 @@ public class Client implements Serializable {
 	private String name;
 	private String cpf;
 	private Double income;
-	private Instant birthDate;
+	private Instant birthDate = Instant.now();
 	private Integer children;
 	
 	public Client() {
