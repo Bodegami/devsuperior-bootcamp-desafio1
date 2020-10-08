@@ -3,10 +3,13 @@ package com.devsuperior.desafio1.entities;
 import java.io.Serializable;
 import java.time.Instant;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
 
@@ -21,35 +24,30 @@ public class Client implements Serializable {
 	private String name;
 	private String cpf;
 	private Double income;
-	private Instant birthDate = Instant.now();
+	
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+	private Instant birthDate;
 	private Integer children;
+	
 	
 	public Client() {
 		
 	}
 
-	
-	
 
-	public Client(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
+	public Client(Long id, String name, String cpf, Double income, Integer children) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.cpf = cpf;
 		this.income =  income;
-		this.birthDate = birthDate;
 		this.children = children;
 	}
 
 
-	
-	
-
 	public Long getId() {
 		return id;
 	}
-
-
 
 
 	public void setId(Long id) {
@@ -57,13 +55,9 @@ public class Client implements Serializable {
 	}
 
 
-
-
 	public String getName() {
 		return name;
 	}
-
-
 
 
 	public void setName(String name) {
@@ -71,13 +65,9 @@ public class Client implements Serializable {
 	}
 
 
-
-
 	public String getCpf() {
 		return cpf;
 	}
-
-
 
 
 	public void setCpf(String cpf) {
@@ -85,13 +75,9 @@ public class Client implements Serializable {
 	}
 
 
-
-
 	public Double getIncome() {
 		return income;
 	}
-
-
 
 
 	public void setIncome(Double income) {
@@ -99,27 +85,9 @@ public class Client implements Serializable {
 	}
 
 
-
-
-	public Instant getBirthDate() {
-		return birthDate;
-	}
-
-
-
-
-	public void setBirthDate(Instant birthDate) {
-		this.birthDate = birthDate;
-	}
-
-
-
-
 	public Integer getChildren() {
 		return children;
 	}
-
-
 
 
 	public void setChildren(Integer children) {
@@ -127,7 +95,21 @@ public class Client implements Serializable {
 	}
 
 
+	public Instant getBirthDate() {
+		return birthDate;
+	}
 
+
+	@PrePersist
+	public void PrePersist() {
+		birthDate = Instant.now();
+	}
+	
+	
+	@PreUpdate
+	public void PreUpdate() {
+		birthDate = Instant.now();
+	}
 
 	@Override
 	public int hashCode() {

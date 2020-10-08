@@ -1,1 +1,17 @@
-INSERT INTO tb_clients (name, cpf, income, children) VALUES ('Maria', '02880946-03', 2.000, 2 )
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Maria Apareceida do Cargo', '751.651.310-50', 3790.0, NOW(), 2 );
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Henrique Messias', '368.578.150-20', 2000.0, NOW(), 0 );
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Diogo Santos', '346.160.210-82', 1675.0, NOW(), 1 );
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Renato Ferreira Oliveira', '532.371.800-50', 2500.0, NOW(), 3 );
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Leonardo Napolli', '491.343.220-60', 1045.0, NOW(), 1 );
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Gabriela Ferreira da Silva', '670.978.980-20', 4500.0, NOW(), 0 );
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('João Cleber de Souza', '142.323.950-40', 6190.0, NOW(), 0 );
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Larissa Manoela de Carvalho', '752.468.530-04', 3880.0, NOW(), 1 );
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Hugo Baia Luz', '286.552.190-70', 3200.0, NOW(), 2 );
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Carlos Henrique Pereira', '958.170.600-35', 4100.0, NOW(), 1 );
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Tito Lourenço Azenha', '895.550.210-90', 12600.0, NOW(), 4 );
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Juliana Fraga Soveral', '953.370.130-76', 7900.0, NOW(), 1 );
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Angelina Infante Cadaval', '002.085.360-27', 1389.0, NOW(), 0 );
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Anna Espinosa Charneca', '249.125.430-12', 1800.0, NOW(), 0 );
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Ismael Nogueira Barreiros', '788.638.810-06', 1900.0, NOW(), 0 );
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Adrian Palha Cerveira', '868.167.960-04', 1645.0, NOW(), 1 );
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Carmen Guimarães Queirós', '480.262.550-20', 22205.0, NOW(), 6 );

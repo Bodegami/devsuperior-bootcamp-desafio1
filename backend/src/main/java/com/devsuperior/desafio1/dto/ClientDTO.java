@@ -25,7 +25,6 @@ public class ClientDTO implements Serializable {
 		this.name = name;
 		this.cpf = cpf;
 		this.income = income;
-		this.birthDate = birthDate;
 		this.children = children;
 	}
 	
@@ -71,20 +70,20 @@ public class ClientDTO implements Serializable {
 		this.income = income;
 	}
 
-	public Instant getBirthDate() {
-		return birthDate;
-	}
-
-	public void setBirthDate(Instant birthDate) {
-		this.birthDate = birthDate;
-	}
-
 	public Integer getChildren() {
 		return children;
 	}
 
 	public void setChildren(Integer children) {
 		this.children = children;
+	}
+
+	public Instant getBirthDate() {
+		return birthDate;
+	}
+
+	public void setBirthDate(Instant birthDate) {
+		this.birthDate = birthDate;
 	}
 	
 	
