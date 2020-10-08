@@ -8,8 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
 
@@ -35,14 +33,18 @@ public class Client implements Serializable {
 	}
 
 
-	public Client(Long id, String name, String cpf, Double income, Integer children) {
+	public Client(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.cpf = cpf;
 		this.income =  income;
+		this.birthDate = birthDate;
 		this.children = children;
 	}
+
+
+	
 
 
 	public Long getId() {
@@ -85,6 +87,16 @@ public class Client implements Serializable {
 	}
 
 
+	public Instant getBirthDate() {
+		return birthDate;
+	}
+
+
+	public void setBirthDate(Instant birthDate) {
+		this.birthDate = birthDate;
+	}
+
+
 	public Integer getChildren() {
 		return children;
 	}
@@ -94,22 +106,6 @@ public class Client implements Serializable {
 		this.children = children;
 	}
 
-
-	public Instant getBirthDate() {
-		return birthDate;
-	}
-
-
-	@PrePersist
-	public void PrePersist() {
-		birthDate = Instant.now();
-	}
-	
-	
-	@PreUpdate
-	public void PreUpdate() {
-		birthDate = Instant.now();
-	}
 
 	@Override
 	public int hashCode() {
